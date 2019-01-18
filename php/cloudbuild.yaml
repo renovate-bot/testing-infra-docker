@@ -14,8 +14,6 @@
 
 steps:
 
-# make php* Dockerfiles
-
 # php55
 - name: gcr.io/cloud-builders/docker
   args: ['build', '-t', 'gcr.io/cloud-devrel-kokoro-resources/php55', '.']
