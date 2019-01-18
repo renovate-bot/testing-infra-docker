@@ -26,6 +26,7 @@ steps:
 # php56
 - name: 'php56'
   args: ['make', 'php56']
+  id: 'php56'
 - name: gcr.io/cloud-builders/docker
   args: ['build', '-t', 'gcr.io/cloud-devrel-kokoro-resources/php56', '.']
   dir: php56
@@ -35,6 +36,7 @@ steps:
 # php70
 - name: 'php70'
   args: ['make', 'php70']
+  id: 'php70'
 - name: gcr.io/cloud-builders/docker
   args: ['build', '-t', 'gcr.io/cloud-devrel-kokoro-resources/php70', '.']
   dir: php70
@@ -44,6 +46,7 @@ steps:
 # php71
 - name: 'php71'
   args: ['make', 'php71']
+  id: 'php71'
 - name: gcr.io/cloud-builders/docker
   args: ['build', '-t', 'gcr.io/cloud-devrel-kokoro-resources/php71', '.']
   dir: php71
@@ -53,6 +56,7 @@ steps:
 # php72
 - name: 'php72'
   args: ['make', 'php72']
+  id: 'php72'
 - name: gcr.io/cloud-builders/docker
   args: ['build', '-t', 'gcr.io/cloud-devrel-kokoro-resources/php72', '.']
   dir: php72
