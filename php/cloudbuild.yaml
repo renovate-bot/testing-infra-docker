@@ -22,7 +22,7 @@ steps:
   waitFor: ['-']
 
 # php56
-- name: 'php56'
+- name: 'ubuntu'
   args: ['make', 'php56']
   id: 'php56'
 - name: gcr.io/cloud-builders/docker
@@ -32,7 +32,7 @@ steps:
   waitFor: ['php56']
 
 # php70
-- name: 'php70'
+- name: 'ubuntu'
   args: ['make', 'php70']
   id: 'php70'
 - name: gcr.io/cloud-builders/docker
@@ -42,7 +42,7 @@ steps:
   waitFor: ['php70']
 
 # php71
-- name: 'php71'
+- name: 'ubuntu'
   args: ['make', 'php71']
   id: 'php71'
 - name: gcr.io/cloud-builders/docker
@@ -52,7 +52,7 @@ steps:
   waitFor: ['php71']
 
 # php72
-- name: 'php72'
+- name: 'ubuntu'
   args: ['make', 'php72']
   id: 'php72'
 - name: gcr.io/cloud-builders/docker
