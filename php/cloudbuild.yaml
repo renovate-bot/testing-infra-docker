@@ -14,6 +14,8 @@
 
 steps:
 
+# make php* Dockerfiles
+
 # php55
 - name: gcr.io/cloud-builders/docker
   args: ['build', '-t', 'gcr.io/cloud-devrel-kokoro-resources/php55', '.']
@@ -22,32 +24,40 @@ steps:
   waitFor: ['-']
 
 # php56
+- name: 'php56'
+  args: ['make', 'php56']
 - name: gcr.io/cloud-builders/docker
   args: ['build', '-t', 'gcr.io/cloud-devrel-kokoro-resources/php56', '.']
   dir: php56
   id: php56-build
-  waitFor: ['-']
+  waitFor: ['php56']
 
 # php70
+- name: 'php70'
+  args: ['make', 'php70']
 - name: gcr.io/cloud-builders/docker
   args: ['build', '-t', 'gcr.io/cloud-devrel-kokoro-resources/php70', '.']
   dir: php70
   id: php70-build
-  waitFor: ['-']
+  waitFor: ['php70']
 
 # php71
+- name: 'php71'
+  args: ['make', 'php71']
 - name: gcr.io/cloud-builders/docker
   args: ['build', '-t', 'gcr.io/cloud-devrel-kokoro-resources/php71', '.']
   dir: php71
   id: php71-build
-  waitFor: ['-']
+  waitFor: ['php71']
 
 # php72
+- name: 'php72'
+  args: ['make', 'php72']
 - name: gcr.io/cloud-builders/docker
   args: ['build', '-t', 'gcr.io/cloud-devrel-kokoro-resources/php72', '.']
   dir: php72
   id: php72-build
-  waitFor: ['-']
+  waitFor: ['php72']
 
 # php73
 - name: gcr.io/cloud-builders/docker
